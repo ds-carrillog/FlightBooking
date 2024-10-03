@@ -1,0 +1,39 @@
+/* src/styles/SearchBar.css */
+
+/* Container for the search bar */
+.search-bar {
+    background-color: var(--container-color); /* Background color from CSS variable */
+    padding: 15px; /* Padding inside the search bar container */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 800px; /* Maximum width for the search bar */
+    margin: 20px auto; /* Center the search bar horizontally */
+    display: flex; /* Use flexbox for layout */
+    gap: 10px; /* Space between input fields */
+    justify-content: space-between; /* Evenly distribute input fields and button */
+  }
+  
+  /* Styling for the input fields */
+  .search-bar input {
+    padding: 10px; /* Internal padding for input fields */
+    width: 100%; /* Full width for each input field */
+    max-width: 150px; /* Limit the maximum width of input fields */
+    border: 1px solid #ffffff; /* Light border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+  }
+  
+  /* Button styling */
+  .search-bar button {
+    background-color: var(--button-color); /* Button background color from CSS variable */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect for background color on hover */
+  }
+  
+  /* Hover effect for the button */
+  .search-bar button:hover {
+    background-color: var(--hover-color); /* Change background color on hover */
+  }
+  

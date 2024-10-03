@@ -1,0 +1,66 @@
+:root {
+  --subtitles-color: #668f9d;  /* Subtitle text color */
+  --highlight-color: #2a495f;  /* Header and important text color */
+  --button-color: #92b8b6;     /* Button background color */
+  --hover-color: #7ea3a2;      /* Button hover background color */
+  --background-color: #ffffff; /* General background color */
+  --container-color: #B0D7E7;  /* Primary container color (light blue) */
+  --containertwo-color: #D0E8D7; /* Secondary container color (mint green) */
+  --text-color: #555555;  /* Default text color */
+}
+
+/* General body styling */
+body {
+  font-family: 'Poppins', sans-serif;  /* Set font family */
+  background-color: var(--background-color);  /* Apply background color */
+  margin: 0;  /* Remove default margin */
+  padding: 0;  /* Remove default padding */
+  color: var(--text-color);  /* Set default text color */
+}
+
+/* Headings styling (h2 and h3) */
+h2, h3 {
+  color: var(--subtitles-color);  /* Set heading color */
+  text-align: center;  /* Center align headings */
+  font-weight: 600;  /* Bold text for emphasis */
+  margin-bottom: 20px;  /* Space below the heading */
+  margin-top: 30px;  /* Space above the heading */
+  position: relative;  /* Allows for pseudo-element positioning */
+  font-size: x-large;  /* Larger font size for headings */
+}
+
+/* Styling for h4 headings */
+h4 {
+  color: var(--additional-color);  /* Color for additional headings */
+  text-align: center;  /* Center align headings */
+  font-weight: 800;  /* Extra bold text for emphasis */
+  margin-bottom: 10px;  /* Space below the heading */
+  position: relative;  /* Allows for custom effects */
+}
+
+/* Add a subtle underline effect to h2 and h3 */
+h2::after, h3::after {
+  content: '';  /* Empty content for underline */
+  width: 80px;  /* Set the width of the underline */
+  height: 2px;  /* Set the thickness of the underline */
+  background-color: var(--subtitles-color);  /* Use subtitle color for underline */
+  display: block;  /* Display as a block element */
+  margin: 10px auto 0 auto;  /* Center the underline */
+}
+
+/* Button styling */
+button {
+  font-family: inherit;  /* Inherit the font from the parent */
+  color: white;  /* White text for contrast */
+  background-color: var(--button-color);  /* Use button color variable */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: var(--hover-color);  /* Darken background on hover */
+}
+
+/* General container styling */
+.container {
+  padding: 20px;  /* Add padding inside the container */
+}

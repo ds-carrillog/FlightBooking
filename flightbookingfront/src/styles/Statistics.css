@@ -1,0 +1,72 @@
+/* src/styles/Statistics.css */
+
+/* Main container for the statistics section */
+.statistics {
+    background-color: var(--containertwo-color); /* Secondary container background color */
+    padding: 20px; /* Padding inside the statistics container */
+    border-radius: 10px; /* Rounded corners */
+    border: 20px solid var(--container-color); /* Outer border with primary container color */
+    max-width: 600px; /* Maximum width for the statistics container */
+    margin: 30px auto; /* Center the container with margin */
+    text-align: center; /* Center-align text inside the container */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  /* Styling for the chart title */
+  .chart-title {
+    color: var(--text-color); /* Use a text color from variables */
+    margin-bottom: 15px; /* Space below the title */
+    font-size: 18px; /* Font size for the title */
+    font-weight: 500; /* Medium weight for the title */
+  }
+  
+  /* Vertical bar graph container */
+  .vertical-bar-graph {
+    display: flex; /* Use flexbox to layout the bars */
+    justify-content: center; /* Center bars horizontally */
+    align-items: flex-end; /* Align bars to the bottom */
+    margin: 10px auto; /* Center the graph with margin */
+    height: 250px; /* Fixed height for the graph area */
+  }
+  
+  /* Container for each vertical bar */
+  .vertical-bar-container {
+    text-align: center; /* Center the content within each bar */
+    width: 80px; /* Set a fixed width for each bar */
+    margin: 0 10px; /* Add space between bars */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack the label below the bar */
+    justify-content: flex-end; /* Align the bar to the bottom */
+  }
+  
+  /* Styling for the vertical bar */
+  .vertical-bar {
+    width: 50px; /* Fixed width for each bar */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: flex-end; /* Align content at the bottom */
+    color: white; /* White text for the bar */
+    font-weight: bold; /* Bold font for the text */
+    padding-bottom: 5px; /* Padding at the bottom for spacing */
+  }
+  
+  /* Gradient color styles for the bars */
+  .color-1, .color-2, .color-3 {
+    background: var(--button-color);  /* Color from variable for bar background */
+  }
+  
+  /* Airline label styling under the bars */
+  .label {
+    font-size: 13px; /* Font size for the labels */
+    font-weight: 400; /* Normal font weight for labels */
+    margin-top: 5px; /* Space above the label */
+    text-align: center; /* Center-align the label text */
+    white-space: normal; /* Allow the label to wrap if needed */
+    word-wrap: break-word; /* Ensure words wrap if they are too long */
+    min-height: 30px; /* Minimum height for label alignment */
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically center the label */
+    justify-content: center; /* Horizontally center the label */
+  }
+  

@@ -9,3 +9,13 @@ services:
       - "8080:8080"
     volumes:
       - ./data:/app/data
+
+
+  frontend:
+    image: flightbookingfront
+    build:
+      context: ./flightbookingfront
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+  

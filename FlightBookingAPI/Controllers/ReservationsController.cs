@@ -50,22 +50,23 @@ namespace FlightBookingAPI.Controllers
         [HttpPost]
         public ActionResult<Reservation> CreateReservation([FromBody] Reservation reservation)
         {
-            // Ensure the flight exists before creating the reservation
             var flight = _context.Flights.Find(reservation.FlightId);
             if (flight == null)
             {
-                // Return 404 if the flight does not exist
-                return NotFound("Flight not found");
+                return NotFound("Flight not found.");
             }
 
-            // Set the reservation date to the current time
-            reservation.ReservationDate = DateTime.Now;
+            // Validation: Check if the flight's departure date has already passed
+            if (flight.DepartureDate < DateTime.Now)
+            {
+                return BadRequest("Cannot make a reservation for a flight that has already departed.");
+            }
 
-            // Add the reservation to the database
+            // If validation passes, proceed with creating the reservation
+            reservation.ReservationDate = DateTime.Now; // Set reservation date to current time
             _context.Reservations.Add(reservation);
-            _context.SaveChanges();  // Save changes to the database
+            _context.SaveChanges();
 
-            // Return the created reservation along with its location
             return CreatedAtAction(nameof(GetReservations), new { id = reservation.Id }, reservation);
         }
     }

@@ -1,0 +1,27 @@
+.main-header {
+    background-color: var(--primary-color); /* Fallback background color */
+    color: var(--highlight-color); /* Text color */
+    text-align: center; /* Center align the text */
+    padding: 40px 20px; /* Padding inside the header */
+    font-size: 2.5rem; /* Font size for the main header text */
+    font-weight: bold; /* Bold font weight */
+    font-family: 'Poppins', sans-serif; /* Use 'Poppins' font */
+    position: relative; /* Relative position for proper placement */
+    width: 65%; /* Set the width to 65% of the container */
+    margin: 20px auto; /* Center the header with margin */
+    border-radius: 10px; /* Rounded corners for the header */
+
+    /* Add background image */
+    background-image: url('../images/airplane.png'); /* Path to your airplane image */
+    background-size: contain; /* Make sure the image fits within the header */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: right center; /* Align the image to the right, vertically centered */
+
+    /* Add transparency to the background */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+}
+
+.main-header h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 3rem; /* Larger font size for the h1 text */
+}

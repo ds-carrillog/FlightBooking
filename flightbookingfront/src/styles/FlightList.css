@@ -1,0 +1,56 @@
+/* src/components/FlightList.css */
+
+/* Container for the flight list */
+.flight-list {
+    width: 100%; /* Full width */
+    max-width: 80%; /* Limit the width of the list */
+    margin: 0 auto; /* Center the list */
+    background-color: var(--containertwo-color); /* Use a secondary container background color */
+    padding: 20px; /* Padding inside the list container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%; /* Table takes up full width of its container */
+    border-collapse: collapse; /* Remove default space between table borders */
+  }
+  
+  /* Table header (th) and table data (td) cell styling */
+  th, td {
+    padding: 12px 15px; /* Internal padding for cells */
+    text-align: center; /* Center-align text in the cells */
+    border-bottom: 1px solid #dddddd; /* Add a light border at the bottom of each row */
+  }
+  
+  /* Table header row styling */
+  th {
+    background-color: var(--container-color); /* Background color for table headers */
+  }
+  
+  /* Table data row styling */
+  td {
+    background-color: #ffeeee; /* Light background color for table cells */
+  }
+  
+  /* Change background color when hovering over table rows */
+  tr:hover {
+    background-color: #ffe8d6; /* Light background color on hover */
+  }
+  
+  /* Button styling */
+  button {
+    padding: 8px 12px; /* Padding inside the button */
+    background-color: var(--button-color); /* Button background color from a CSS variable */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: var(--hover-color); /* Change background color on hover */
+  }
+  

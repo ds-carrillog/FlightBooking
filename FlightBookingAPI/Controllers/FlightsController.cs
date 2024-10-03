@@ -42,10 +42,22 @@ namespace FlightBookingAPI.Controllers
         [HttpPost]
         public ActionResult<Flight> CreateFlight([FromBody] Flight flight)
         {
-            _context.Flights.Add(flight); // Add the new flight to the database
-            _context.SaveChanges(); // Persist changes
+            // Validation: Check if departure date is in the past
+            if (flight.DepartureDate < DateTime.Now)
+            {
+                return BadRequest("Departure date cannot be in the past.");
+            }
 
-            // Return the newly created flight with its assigned Id
+            // Validation: Ensure departure date is after the arrival date
+            if (flight.DepartureDate > flight.ArrivalDate)
+            {
+                return BadRequest("Departure date cannot be after the arrival date.");
+            }
+
+            // If validation passes, proceed with adding the flight
+            _context.Flights.Add(flight);
+            _context.SaveChanges();
+
             return CreatedAtAction(nameof(GetFlight), new { id = flight.Id }, flight);
         }
 

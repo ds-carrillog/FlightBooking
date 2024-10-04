@@ -20,8 +20,12 @@ const Statistics = () => {
 
     // Fetch the top 3 airlines with the most reservations
     axios.get(`${process.env.REACT_APP_API_URL}/Flights/Statistics/TopAirlines`)
-      .then(response => setTopAirlines(response.data.slice(0, 3)))  // Limit to top 3 airlines
-      .catch(error => console.error('Error fetching top airlines:', error));
+  .then(response => setTopAirlines(response.data.slice(0, 3)))  // Limit to top 3 airlines
+  .catch(error => {
+    console.error('Error fetching top airlines:', error);  // Log any errors
+    console.log(process.env.REACT_APP_API_URL); // Debería imprimir la URL del backend
+  });
+
   };
 
   return (

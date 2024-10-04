@@ -7,9 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        builder => builder.WithOrigins("http://localhost:3000") // Allow CORS for the React frontend running on localhost
-                          .AllowAnyHeader() // Allow any headers from the frontend
-                          .AllowAnyMethod()); // Allow all HTTP methods (GET, POST, PUT, DELETE)
+        builder => builder.WithOrigins("https://flight-booking-lake.vercel.app/") 
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
 });
 
 // Register services for the FlightContext and the SQLite database for flights

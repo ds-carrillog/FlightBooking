@@ -19,9 +19,7 @@ const ReservationForm = ({ flight, onSubmit }) => {
 
     // If validation passes, proceed with the API call
     onSubmit(passengerName);
-
-};
-
+  };
 
   return (
     <div className="reservation-form">

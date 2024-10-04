@@ -19,7 +19,7 @@ const SearchBar = ({ onSearchResults }) => {
 
   // Handle the search button click to fetch flight data
   const handleSearch = () => {
-    axios.get(`http://localhost:8080/Flights/Search`, { params: searchData }) // Pass search parameters
+    axios.get(`${process.env.REACT_APP_API_URL}/Flights/Search`, { params: searchData }) // Use the environment variable
       .then(response => onSearchResults(response.data)) // Pass results to parent component
       .catch(error => console.error('Error searching flights:', error)); // Log any errors
   };

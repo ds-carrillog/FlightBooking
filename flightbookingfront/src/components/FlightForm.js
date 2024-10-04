@@ -41,7 +41,7 @@ const FlightForm = ({ onFlightAdded }) => {
     }
 
     // If validation passes, proceed with the API call
-    axios.post('http://localhost:8080/Flights', flightData)
+    axios.post(`${process.env.REACT_APP_API_URL}/Flights`, flightData) // Use the environment variable
         .then((response) => {
             onFlightAdded(response.data);
             setFlightData({
@@ -54,7 +54,7 @@ const FlightForm = ({ onFlightAdded }) => {
             });
         })
         .catch((error) => console.error('Error adding flight:', error));
-};
+  };
 
   return (
     <form className="flight-form" onSubmit={handleSubmit}>

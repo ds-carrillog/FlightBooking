@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Base URL for the API
-const API_URL = 'http://localhost:8080';
+const API_URL = process.env.REACT_APP_API_URL; // Use the environment variable
 
 // Fetch all flights from the API
 export const getFlights = () => axios.get(`${API_URL}/Flights`);

@@ -14,12 +14,12 @@ const Statistics = () => {
   // Function to fetch both total airlines count and top airlines data
   const fetchStatistics = () => {
     // Fetch the total number of airlines
-    axios.get('http://localhost:8080/Flights/Statistics/AirlinesCount')
+    axios.get(`${process.env.REACT_APP_API_URL}/Flights/Statistics/AirlinesCount`)
       .then(response => setAirlinesCount(response.data))
       .catch(error => console.error('Error fetching airline count:', error));
 
     // Fetch the top 3 airlines with the most reservations
-    axios.get('http://localhost:8080/Flights/Statistics/TopAirlines')
+    axios.get(`${process.env.REACT_APP_API_URL}/Flights/Statistics/TopAirlines`)
       .then(response => setTopAirlines(response.data.slice(0, 3)))  // Limit to top 3 airlines
       .catch(error => console.error('Error fetching top airlines:', error));
   };

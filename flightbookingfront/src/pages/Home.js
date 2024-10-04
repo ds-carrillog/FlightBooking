@@ -17,7 +17,7 @@ const Home = () => {
 
   // Function to fetch flights from the API
   const fetchFlights = () => {
-    axios.get('http://localhost:8080/Flights')
+    axios.get(`${process.env.REACT_APP_API_URL}/Flights`)  // Use the environment variable
       .then(response => setFlights(response.data))  // Update the flights state
       .catch(error => console.error('Error fetching flights:', error));  // Handle any errors
   };

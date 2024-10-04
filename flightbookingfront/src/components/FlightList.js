@@ -15,7 +15,7 @@ const FlightList = ({ flights, onReservation, refreshStatistics }) => {
 
   // Handle reservation submission
   const handleReservation = (passengerName) => {
-    axios.post('http://localhost:8080/Reservations', { flightId: selectedFlight.id, passengerName })
+    axios.post(`${process.env.REACT_APP_API_URL}/Reservations`, { flightId: selectedFlight.id, passengerName }) // Use the environment variable
       .then(() => {
         // Reset the state and close the modal after a successful reservation
         setSelectedFlight(null);

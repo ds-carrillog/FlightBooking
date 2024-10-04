@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend",
-        builder => builder.WithOrigins("https://flight-booking-lake.vercel.app/") 
+        builder => builder.WithOrigins("https://flight-booking-lake.vercel.app") 
                           .AllowAnyHeader()
                           .AllowAnyMethod());
 });
